@@ -51,13 +51,13 @@ app.utils.template = (function ($) {
             }
 
         } else {
-            throw new Error(‘app.utils.template()', 'Please verify your template is being used correctly.');
+            throw new Error('app.utils.template()', 'Please verify your template is being used correctly.');
         }
 
         return html.replace(/({{)+\w+(}})/igm, '');
     };
 
-    
+
     return function (template, collection) {
         try {
             return _template(template, collection);
