@@ -55,7 +55,7 @@ app.utils.cookie = (function () {
          * @description clear cookies in collection
          * @param collection {object/array}
          */
-        clear: function (collection) {
+        clearAll: function (collection) {
             var key, count;
             if (Array.isArray(collection)) {
                 for (key = 0, count = collection.length; key < count; key++) {
