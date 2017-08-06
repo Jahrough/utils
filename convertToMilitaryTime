@@ -1,13 +1,13 @@
 // convert civilian time to military time
-var convertToMilitaryTime = function (s) {
+var convertToMilitaryTime = function (str) {
 	var militaryTime = [];
-	var civilianTime = s.trim();
-	var civilianTimeLength = civilianTime.length;
-	var civilianTimeIndexEnd = civilianTimeLength - 2;
+	var standardTime = str.trim();
+	var standardTimeLength = standardTime.length;
+	var standardTimeIndexEnd = standardTimeLength - 2;
 
-	civilianTime = `${civilianTime.substring(0, civilianTimeIndexEnd)} ${civilianTime.substring(civilianTimeLength, civilianTimeIndexEnd)}`;
-	civilianTime = new Date(`2000 ${civilianTime}`);
-	militaryTime.push(civilianTime.getHours(), civilianTime.getMinutes(), civilianTime.getSeconds());
+	standardTime = `${standardTime.substring(0, standardTimeIndexEnd)} ${standardTime.substring(standardTimeLength, standardTimeIndexEnd)}`;
+	standardTime = new Date(`2000 ${civilianTime}`);
+	militaryTime.push(standardTime.getHours(), standardTime.getMinutes(), standardTime.getSeconds());
 
 	for (var i = 0; i < militaryTime.length; i++) {
 		militaryTime[i] = militaryTime[i].toString();
