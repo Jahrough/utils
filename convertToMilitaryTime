@@ -8,13 +8,13 @@ var convertToMilitaryTime = function (str) {
 	standardTime = `${standardTime.substring(0, standardTimeIndexEnd)} ${standardTime.substring(standardTimeLength, standardTimeIndexEnd)}`;
 	standardTime = new Date(`2000 ${civilianTime}`);
 	militaryTime.push(standardTime.getHours(), standardTime.getMinutes(), standardTime.getSeconds());
-
-	for (var i = 0; i < militaryTime.length; i++) {
-		militaryTime[i] = militaryTime[i].toString();
-		if (militaryTime[i].length < 2) {
-			militaryTime[i] = '0' + militaryTime[i];
+	
+	militaryTime.forEach(function(element) {
+		element = element.toString();
+		if (element.length < 2) {
+			element = '0' + element;
 		}
-	}
-
+	});
+	
 	return militaryTime.join(':');
 }
