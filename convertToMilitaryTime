@@ -6,7 +6,7 @@ var convertToMilitaryTime = function (str) {
 	var standardTimeIndexEnd = standardTimeLength - 2;
 
 	standardTime = `${standardTime.substring(0, standardTimeIndexEnd)} ${standardTime.substring(standardTimeLength, standardTimeIndexEnd)}`;
-	standardTime = new Date(`2000 ${civilianTime}`);
+	standardTime = new Date(`2000 ${standardTime}`);
 	militaryTime.push(standardTime.getHours(), standardTime.getMinutes(), standardTime.getSeconds());
 	
 	militaryTime.forEach(function(element) {
