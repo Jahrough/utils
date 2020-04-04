@@ -13,7 +13,9 @@ const setGracePeriod = (delay = 10000) => {
                 clearTimeout(timeout);
                 timeout = null;
             }
-        } else if (!timeout) {
+        }
+        
+        if (!state && !timeout) {
             timeout = setTimeout(() => (state = true), delay);
         }
 
